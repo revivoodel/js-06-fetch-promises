@@ -142,7 +142,7 @@ function todoAndUser(todoId) {
         .then(data => {
             todo = data;
 
-            return fetch(`https://jsonplaceholder.typicode.com/users/${todo.userId}`);
+            return fetch(`https://jsonplaceholder.typicode.com/users/${data.userId}`);
         })
         .then(response => response.json())
         .then(user => {
